@@ -54,17 +54,15 @@ class Game:
                         self.snake.move_up()
                     if event.key == K_DOWN:
                         self.snake.move_down()
-
                     if event.key == K_LEFT:
                         self.snake.move_left()
-
                     if event.key == K_RIGHT:
                         self.snake.move_right()
-
                 elif event.type == QUIT:
                     running = False
             self.snake.walk()
             time.sleep(0.2)
+        pygame.quit()
 
 if __name__ == '__main__':
     game = Game()
